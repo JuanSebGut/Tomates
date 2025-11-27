@@ -17,19 +17,18 @@ CORS(app)
 
 # MongoDB Atlas Connection Setup
 # Establishes connection to cloud database using connection string with credentials
-#mongodb://localhost:27017/tomates_db
+
 from pymongo import MongoClient
 
-# Conexión local
-client = MongoClient("mongodb://localhost:27017/")
-
-# Nombre de la base local (la que tienes en Compass)
-db = client["tomates_db"]
+client = MongoClient(
+    "mongodb+srv://juansegutt:300716@cluster0.erc6l2t.mongodb.net/tomates_db")
+db = client["IdentificadorTomates"]
 
 # Colecciones
 predictions_collection = db["predictions"]
 segmentations_collection = db["segmentations"]
 
+como pongo estas lineas, es para base de datos local 
 
 # ---------------------------------------------------------------------------------------------------------
 # 2. Model Configuration / Configuración de Modelos
